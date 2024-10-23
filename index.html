@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Green</title>
+    <title>EcoClick</title>
     <link rel="stylesheet" href="accueil.css">
 </head>
 <body>
     
     <header class="header">
         <nav class="navbar">
-            <h1 class="logo">IT Green</h1>
+            <h1 class="logo">EcoClick</h1>
             <ul class="nav-links">
                 <li><a href="#about">À Propos</a></li>
                 <li><a href="#services">Services</a></li>
@@ -30,7 +30,7 @@
 
     <section id="about" class="about">
         <h2>À Propos de Nous</h2>
-        <p>Chez IT Green, nous croyons en la technologie durable. Nous offrons des solutions IT vertes qui minimisent l'impact environnemental tout en maximisant l'efficacité.</p>
+        <p>Chez EcoClick, nous croyons en la technologie durable. Nous offrons des solutions IT vertes qui minimisent l'impact environnemental tout en maximisant l'efficacité.</p>
     </section>
 
     <section id="services" class="services">
@@ -45,10 +45,30 @@
         </div>
     </section>
 
-    <footer id="contact" class="footer">
-        <p>Contactez-nous à : info@itgreen.com</p>
-        <p>&copy; 2024 IT Green. Tous droits réservés.</p>
+    <section id="contact" class="contact">
+        <h2>Contactez-nous</h2>
+        <form action="votre_script_de_traitement.php" method="post">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">E-mail :</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Sujet :</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>Contactez-nous à : info@ecoclick.com</p>
+        <p>&copy; 2024 EcoClick. Tous droits réservés.</p>
     </footer>
+    
 
 </body>
 </html>
