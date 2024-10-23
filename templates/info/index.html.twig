@@ -1,8 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Infos Classées par Thème{% endblock %}
+{% block title %}Accueil - EcoClick{% endblock %}
 
 {% block body %}
+<!-- Section Accueil -->
+<section class="accueil">
+    <div class="hero-content">
+        <h2>Bienvenue chez EcoClick</h2>
+        <p>Votre partenaire de confiance pour des solutions IT écologiques.</p>
+        <p>Ensemble vers un futur numérique durable</p>
+        <a href="#services" class="cta-button">En savoir plus</a>
+    </div>
+</section>
+
+<!-- Section À Propos -->
+<section id="about" class="about">
+    <div class="all-about">
+        <div class="a-propos-text">
+            <h2>À Propos de Nous</h2>
+            <p>Bienvenue sur EcoClick, votre plateforme dédiée à l'informatique durable. Notre mission est de rendre l'information sur le <strong>Green IT</strong> plus accessible.</p>
+            <p>Que vous soyez un particulier ou une entreprise, vous trouverez des ressources pour une démarche écoresponsable.</p>
+            <p>Optimisez vos infrastructures avec EcoClick pour un futur plus vert.</p>
+        </div>
+        <img src="{{ asset('images/homme.jpg') }}" alt="homme">
+    </div>
+</section>
+
+<!-- Section Infos Classées par Thème -->
+<section id="infos-theme" class="infos-theme">
     <h1>Infos Classées par Thème</h1>
 
     {% for theme in themes %}
@@ -24,21 +49,22 @@
     {% else %}
         <p>Aucun thème disponible.</p>
     {% endfor %}
+</section>
 
-    <script>
-        // Récupérer tous les éléments avec la classe 'info-title'
-        document.querySelectorAll('.info-title').forEach(function(titleElement) {
-            titleElement.addEventListener('click', function() {
-                var infoId = this.getAttribute('data-id');
-                var descriptionElement = document.getElementById('description-' + infoId);
-                
-                // Alterner l'affichage de la description
-                if (descriptionElement.style.display === 'none') {
-                    descriptionElement.style.display = 'block';
-                } else {
-                    descriptionElement.style.display = 'none';
-                }
-            });
+<script>
+    // Récupérer tous les éléments avec la classe 'info-title'
+    document.querySelectorAll('.info-title').forEach(function(titleElement) {
+        titleElement.addEventListener('click', function() {
+            var infoId = this.getAttribute('data-id');
+            var descriptionElement = document.getElementById('description-' + infoId);
+            
+            // Alterner l'affichage de la description
+            if (descriptionElement.style.display === 'none') {
+                descriptionElement.style.display = 'block';
+            } else {
+                descriptionElement.style.display = 'none';
+            }
         });
-    </script>
+    });
+</script>
 {% endblock %}
