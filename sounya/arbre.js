@@ -1,10 +1,11 @@
 const LEAVES = [
-    { name: "Front-end", info: "Optimisation de la consommation énergétique des applications web via le front-end." },
-    { name: "Back-end", info: "Gestion des serveurs pour réduire l'empreinte carbone des applications." },
-    { name: "Hébergement", info: "Utilisation d'hébergements écologiques alimentés par des énergies renouvelables." },
-    { name: "Réseaux", info: "Optimisation des échanges réseau pour minimiser la consommation d'énergie." },
-    { name: "UI/UX", info: "Conception de designs éco-responsables pour réduire l'impact énergétique." }
+    { theme: "Développement web", name: "Front-end", info: "Optimisation de la consommation énergétique des applications web via le front-end." },
+    { theme: "Serveurs", name: "Back-end", info: "Gestion des serveurs pour réduire l'empreinte carbone des applications." },
+    { theme: "Énergies renouvelables", name: "Hébergement", info: "Utilisation d'hébergements écologiques alimentés par des énergies renouvelables." },
+    { theme: "Communications", name: "Réseaux", info: "Optimisation des échanges réseau pour minimiser la consommation d'énergie." },
+    { theme: "Design", name: "UI/UX", info: "Conception de designs éco-responsables pour réduire l'impact énergétique." }
 ];
+
 
 function createLeafCard(leaf) {
     const card = document.createElement('div');
@@ -17,6 +18,8 @@ function createLeafCard(leaf) {
     card.addEventListener("click", () => {
         document.getElementById('modal-text').textContent = leaf.info;
         document.getElementById('infoModal').style.display = 'block';
+        document.getElementById('modal-theme').textContent = leaf.theme;
+        document.getElementById('modal-title').textContent = leaf.name;
     });
 
     return card;
