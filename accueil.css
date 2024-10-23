@@ -44,6 +44,9 @@ header {
     font-weight: bold;
 }
 
+
+
+/* section accueil */
 .accueil {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./image/R.jpg') no-repeat center center/cover;
     height: 100vh;
@@ -78,7 +81,48 @@ header {
     background-color: #2e8b57;
 }
 
-.about, .services {
+
+
+/* section about */
+.about {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    background-color: #fff; /* La couleur de fond */
+    align-items: center;
+    justify-content: center; /* Centrer horizontalement */
+    padding: 50px;
+    text-align: center;
+}
+
+.all-about {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center; /* Assure que le contenu de cette div est centré */
+}
+
+.a-propos-text {
+    margin: 0 auto; /* Centre le texte */
+    text-align: center; /* Centre le texte à l'intérieur de la div */
+    justify-content: space-between; /* Non nécessaire ici */
+    line-height: 1.6; /* Augmente l'espacement entre les lignes pour une meilleure lisibilité */
+}
+
+.a-propos-text p {
+    margin-bottom: 20px; /* Ajoute un espace entre les paragraphes */
+}
+
+.about img {
+    height: auto; /* Assure que l'image conserve ses proportions */
+    margin-left: 20px; /* Ajoute un peu d'espace à gauche de l'image */
+}
+
+
+
+
+/* section service */
+.services {
     padding: 50px;
     background-color: #fff;
     text-align: center;
@@ -92,18 +136,10 @@ header {
     border-radius: 5px;
 }
 
-footer {
-    background-color: #2e8b57;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-footer p {
-    margin: 5px 0;
-}
 
 
+
+/* section contact */
 .contact {
     padding: 50px;
     background-color: #fff;
@@ -158,4 +194,18 @@ button {
 
 button:hover {
     background-color: #2e8b57; /* Couleur au survol */
+}
+
+
+
+/* section footer */
+footer {
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 5px 0;
 }
