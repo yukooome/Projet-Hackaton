@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Infos Classées par Thème{% endblock %}
+
+{% block body %}
+    <h1>Infos Classées par Thème</h1>
+
+    {% for theme in themes %}
+        <h2>{{ theme.nom }}</h2>
+        <ul>
+            {% for info in theme.infos %}
+                <li>
+                    <h3 class="info-title" data-id="{{ info.id }}" style="cursor: pointer;">
+                        {{ info.titre }}
+                    </h3>
+                    <p id="description-{{ info.id }}" style="display: none;">
+                        {{ info.description }}
+                    </p>
+                </li>
+            {% else %}
+                <li>Aucune info disponible pour ce thème.</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucun thème disponible.</p>
+    {% endfor %}
+
+    <script>
+        // Récupérer tous les éléments avec la classe 'info-title'
+        document.querySelectorAll('.info-title').forEach(function(titleElement) {
+            titleElement.addEventListener('click', function() {
+                var infoId = this.getAttribute('data-id');
+                var descriptionElement = document.getElementById('description-' + infoId);
+                
+                // Alterner l'affichage de la description
+                if (descriptionElement.style.display === 'none') {
+                    descriptionElement.style.display = 'block';
+                } else {
+                    descriptionElement.style.display = 'none';
+                }
+            });
+        });
+    </script>
+{% endblock %}
