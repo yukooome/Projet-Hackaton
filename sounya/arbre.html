@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="global.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="arbre.css">
+    <script src="arbre.js" defer></script>
+    <script src="./phaser.min.js"></script>
     
     <title>Document</title>
 </head>
@@ -15,6 +16,18 @@
     <div id="leaves-container"> </div>
 
     <!-- Modal -->
+
+     <!-- Modal Structure -->
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-theme"></h2> <!-- Thème -->
+        <h1 id="modal-title"></h1> <!-- Titre -->
+        <p id="modal-text"></p> <!-- Description -->
+    </div>
+</div>
+
+<!--close modal-->
     <div id="infoModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
