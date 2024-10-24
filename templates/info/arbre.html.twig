@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Projet avec feuilles{% endblock %}
+
+
+{% block body %}
+<section class="projet-all">
+    <div class="box">
+        <div class="box-arbre"> 
+
+            <!-- Conteneur pour les feuilles -->
+            <div id="leaves-container"> 
+                <!-- Afficher dynamiquement les feuilles via Twig -->
+                {% for theme in themes %}
+        <h2>{{ theme.nom }}</h2>
+        <ul>
+            {% for info in theme.infos %}
+                <li>
+                    <h3 class="info-title" data-id="{{ info.id }}" style="cursor: pointer;">
+                        {{ info.titre }}
+                    </h3>
+                    <p id="description-{{ info.id }}" style="display: none;">
+                        {{ info.description }}
+                    </p>
+                </li>
+            {% else %}
+                <li>Aucune info disponible pour ce thème.</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucun thème disponible.</p>
+    {% endfor %}
+
+            <!-- Modal Structure -->
+            <div id="infoModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modal-theme"></h2> <!-- Thème -->
+                    <h1 id="modal-title"></h1> <!-- Titre -->
+                    <p id="modal-text"></p> <!-- Description -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Gestion des cartes de feuilles
+        document.querySelectorAll('.leaf-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const theme = this.getAttribute('data-theme');
+                const info = this.getAttribute('data-info');
+                const name = this.querySelector('h1').textContent;
+
+                document.getElementById('modal-theme').textContent = theme;
+                document.getElementById('modal-title').textContent = name;
+                document.getElementById('modal-text').textContent = info;
+
+                document.getElementById('infoModal').style.display = 'block';
+            });
+        });
+
+        // Pour fermer le modal
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('infoModal').style.display = 'none';
+        });
+
+        // Fermer en cliquant à l'extérieur de la modal
+        window.addEventListener('click', function(event) {
+            if (event.target == document.getElementById('infoModal')) {
+                document.getElementById('infoModal').style.display = 'none';
+            }
+        });
+    });
+</script>
+{% endblock %}

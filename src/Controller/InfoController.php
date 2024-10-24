@@ -20,4 +20,13 @@ class InfoController extends AbstractController
             'themes' => $themes,
         ]);
     }
+    #[Route('/arbre', name: 'app_arbre')]
+    public function arbre(ThemeRepository $themeRepository): Response
+    {
+        $themes = $themeRepository->findAll();
+        // Rendre la vue arbre.html.twig
+        return $this->render('info/arbre.html.twig', [
+            'themes' => $themes,
+        ]);
+    }
 }

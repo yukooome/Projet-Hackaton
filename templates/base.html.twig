@@ -7,10 +7,12 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ asset('styles/app.css') }}">
+    
 
     <!-- Bootstrap & FontAwesome (lien footer) -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
 
     {% block stylesheets %}{% endblock %}
 </head>
@@ -34,67 +36,75 @@
     </main>
 
     <footer class="mainfooter" role="contentinfo">
-      <div class="footer-middle">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 col-sm-6">
-            <!-- Column1 -->
-            <div class="footer-pad">
-              <h4>Assistance Client</h4>
-              <ul class="list-unstyled">
-                <li><a href="#">Payment Center</a></li>
-                <li><a href="#">Contact Direction</a></li>
-                <li><a href="#">Formulaire</a></li>
-                <li><a href="#">Nouvelles et mises à jour</a></li>
-                <li><a href="#">FAQs</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <!-- Column2 -->
-            <div class="footer-pad">
-              <h4>Informations Légales</h4>
-              <ul class="list-unstyled">
-                <li><a href="#">Website Tutoriel</a></li>
-                <li><a href="#">Accessibilité</a></li>
-                <li><a href="#">Disclaimer</a></li>
-                <li><a href="#">Politique de confidentialité</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <!-- Column3 -->
-            <div class="footer-pad">
-              <h4>Services et Ressources</h4>
-              <ul class="list-unstyled">
-                <li><a href="#">Loisirs</a></li>
-                <li><a href="#">Travaux publics</a></li>
-                <li><a href="#">Situation</a></li>
-                <li><a href="#">Urgence</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <h4>Suivez-nous</h4>
+  <div class="footer-middle">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-6">
+        <!--Column1-->
+        <div class="footer-pad">
+          <h4>Assistance Client</h4>
+          <ul class="list-unstyled">
+            <li><a href="#"></a></li>
+            <li><a href="#">Payment Center</a></li>
+            <li><a href="#">Contact Direction</a></li>
+            <li><a href="#">Formulaire</a></li>
+            <li><a href="#">Nouvelles et mises à jour</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <!--Column1-->
+        <div class="footer-pad">
+          <h4>Informations Légales</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Website Tutoriel</a></li>
+            <li><a href="#">Accessibilité</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Webmaster</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <!--Column1-->
+        <div class="footer-pad">
+          <h4>Services et Ressources</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">loisirs</a></li>
+            <li><a href="#">Travaux publics</a></li>
+            <li><a href="#">Situation</a></li>
+            <li><a href="#">Urgence</a></li>
+            <!-- <li><a href="#">Mayor and City Council</a></li> -->
+            <li>
+              <a href="#"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    	<div class="col-md-3">
+    		<h4>Suivez-nous</h4>
             <ul class="social-network social-circle">
-              <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#" class="icoLinkedin" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-            </ul>        
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 copy">
-            <p class="text-center">&copy; Copyright 2024 - EcoClick. Tous droits réservés.</p>
-          </div>
-        </div>
-      </div>
-      </div>
-    </footer>
+             <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+             <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+            </ul>				
+		</div>
+    </div>
+	<div class="row">
+		<div class="col-md-12 copy">
+			<p class="text-center">&copy; Copyright 2024 - Company EcoClick.  All rights reserved.</p>
+		</div>
+	</div>
+  </div>
+  </div>
+</footer>
 
     <!-- Scripts Bootstrap & jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
     
     {% block javascripts %}{% endblock %}
 </body>
