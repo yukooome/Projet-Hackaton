@@ -27,6 +27,9 @@
                 <a href = {{path('app_info')}}><img src="{{ asset('images/logo.png') }}" alt="EcoClick"></a>
             </div>
             <ul class="nav-links">
+            {% if show_nav is defined and show_nav %}
+                <li><a href={{ path('app_info') }}>Accueil</a></li>
+            {% endif %}
                 <li><a href={{ path('app_info') }}#about>À Propos</a></li>
                 <li><a href={{ path('app_info') }}#service>Services</a></li>
                 <li><a href={{ path('app_info') }}#contact>Contact</a></li>
