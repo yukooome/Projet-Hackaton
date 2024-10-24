@@ -163,87 +163,116 @@ header {
 
 
 /* projet-all */
-.projet-all{
-    width: 100%;
-    height: 60vh;
-    /* background-color: #007bb7; */
+.projet-all {
+    width: 100%; /* Assurez-vous que la section utilise toute la largeur */
+    height: 100vh;
     display: flex;
-    align-items: center ;
+    align-items: center;
     justify-content: center;
 }
 
-.box{
-    width: 80%;
-    height: 90%;
-    /* background-color: #44dd68; */
+.box {
+    width: 100%; /* Utiliser toute la largeur de l'écran */
+    height: 100%; /* Ajuster la hauteur */
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
-.box-arbre{
-    width: 45%;
+.box-arbre {
+    width: 100%; /* Utiliser 50% de l'espace disponible */
     height: 100%;
-    background-color: #eaf4f1;
-    border-radius: 5%;
-    padding: 15px;
-}
-
-.box-game{
-    width: 45%;
-    height: 100%;
-    background-color: #e1f2e7;
-    border-radius: 5%;
-    padding: 15px;
-    color: #16222A;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/images/arbre.png');
 }
 
 
 
-
-/* Modal */
-.modal {
-    display: none; /* Cachée par défaut */
-    position: fixed; /* Reste fixe à l'écran */
-    z-index: 1000; /* Au-dessus de tout le reste */
-    left: 0;
-    top: 0;
-    width: 100%; /* Prend tout l'écran */
-    height: 100%; /* Prend tout l'écran */
-    overflow: auto; /* Ajoute un défilement si nécessaire */
-    background-color: rgba(0, 0, 0, 0.8); /* Fond sombre transparent */
-}
-
-.modal-content {
-    background-color: #fefefe; /* Fond de la modal */
-    margin: auto; /* Centre la modal */
-    padding: 20px;
-    border: 1px solid #888; /* Bord de la modal */
-    width: 80%; /* Largeur de la modal */
-    max-width: 600px; /* Largeur maximale pour éviter un trop grand affichage */
-    height: 50%; /* Hauteur de la modal */
-    position: absolute; /* Position absolue pour centrer verticalement */
-    top: 50%; /* Se place à 50% de l'écran */
-    left: 50%; /* Se place à 50% de l'écran */
-    transform: translate(-160%, -50%); /* Centre la modal parfaitement */
-    border-radius: 10px; /* Coins arrondis */
-    text-align: center; /* Centre le texte */
-}
-
-.close {
-    /* color: #aaa;  */
+/* Ajuster les feuilles */
+.leaf-card {
     position: absolute;
-    top: 10px; 
-    right: 15px; 
-    font-size: 28px; 
-    font-weight: bold; 
-    transition: color 0.3s; 
+    width: 100px;
+    height: 80px;
+    background-color: #2e8b57;
+    color: whitesmoke;
+    font-size: smaller;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.close:hover,
-.close:focus {
-    color: red; 
-    text-decoration: none;
+.leaf-card:hover {
+    transform: scale(1.1);
+}
+
+/* Modal Styles */
+
+.modal {
+    display: none; /* La modal est masquée par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; /* Pour s'assurer que la modal est au-dessus des autres éléments */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:700px;
+    margin-top:440px
+}
+
+/* Contenu de la modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px; /* Largeur maximale */
+    position: relative;
+}
+
+/* Bouton de fermeture */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
     cursor: pointer;
+}
+
+
+
+/* Positionnement des feuilles sur les branches avec top/left */
+.leaf-card:nth-child(1) { /*front end*/
+    top: 245px;
+    right:760px;
+}
+
+.leaf-card:nth-child(2) {/*backend*/
+    top: 680px;
+    right: 350px;
+}
+
+.leaf-card:nth-child(3) { /*hebergement*/
+    top: 450px;
+    right: 590px;
+}
+
+.leaf-card:nth-child(4) { /*reseaux*/
+    top: 310px;
+    left: 465px;
+}
+
+.leaf-card:nth-child(5) {/*ux ui*/
+    top: 650px;
+    left: 420px;
 }
 
 
@@ -644,5 +673,38 @@ footer {
     background-color: #F9F9F9;
   }
 
+/* projet */
+.projet{
+    width: 100%;
+    height: 60vh;
+    /* background-color: #007bb7; */
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+}
 
+.box-index{
+    width: 80%;
+    height: 90%;
+    /* background-color: #44dd68; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-arbre-index{
+    width: 45%;
+    height: 100%;
+    background-color: #eaf4f1;
+    border-radius: 5%;
+    padding: 15px;
+}
+
+.box-game{
+    width: 45%;
+    height: 100%;
+    background-color: #e1f2e7;
+    border-radius: 5%;
+    padding: 15px;
+    color: #16222A;
+}
   
