@@ -189,135 +189,145 @@ header {
 
 
 /* api-info */
-.api-info{
+.api-info {
     width: 100%;
     height: 65vh;
-    /* background-color: #007bb7; */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #275831;
-    
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f0f8f5;
 }
 
-.container-api{
+.container-api {
     height: 80%;
     width: 80%;
-    /* background-color: #FA944B; */
     display: flex;
-
+    gap: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
-.gauche{
+.gauche {
     height: 100%;
     width: 70%;
-    /* background-color: #3cb371; */
     display: flex;
     flex-direction: column;
-
+    gap: 20px;
+    padding: 20px;
 }
 
-.droite{
+.droite {
     height: 100%;
     width: 30%;
-    background-color: #F7D1BA;
-    border-radius: 20%;
+    background-color: #eaf4f1;
+    border-radius: 15px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: start;
-    padding: 15px;
-
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.gch-top{
+.droite h3 {
+    text-align: center;
+    color: #4a7c59;
+}
+
+.droite img {
+    width: 90%;
+    border-radius: 10px;
+}
+
+.gch-top, .gch-bottom {
+    display: flex;
+    gap: 20px;
+}
+
+.gch-top {
     height: 50%;
-    width: 95%;
-    /* background-color: #1a91b9; */
-    display: flex;
-    justify-content: space-between;
-    
-
 }
 
-.gch-top-1{
-    height: 90%;
-    width: 30%;
-    background-color: #A8D5BA;
-    border-radius: 20%;
+.gch-top-1, .gch-top-2, .gch-top-3 {
+    flex: 1;
+    background-color: #e1f2e7;
+    border-radius: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
-    padding: 15px;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.gch-top-2{
-    height: 90%;
-    width: 30%;
-    background-color: #F4C7C3;
-    border-radius: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    padding: 15px;
+.gch-top-1:hover, .gch-top-2:hover, .gch-top-3:hover {
+    transform: translateY(-5px);
+    background-color: #d4edda;
 }
 
-.gch-top-3{
-    height: 90%;
-    width: 30%;
-    background-color: #F8E3A1;
-    border-radius: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    padding: 15px;
+.gch-top h3, .gch-bottom h3 {
+    font-size: 1.2rem;
+    color: #4a7c59;
 }
 
-.gch-bottom{
+.gch-top p, .gch-bottom p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.gch-bottom {
     height: 50%;
-    width: 95%;
-    /* background-color: #1fb91a; */
-    display: flex;
-    justify-content: space-between;
 }
 
-.gch-bottom-1{
-    height: 100%;
-    width: 47%;
-    background-color: #D9C2E9;
-    border-radius: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
+.gch-bottom-1, .gch-bottom-2 {
+    flex: 1;
+    background-color: #e6f2ef;
+    border-radius: 10px;
     padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.gch-bottom-2{
-    height: 100%;
-    width: 47%;
-    background-color: #B8DDE1;
-    border-radius: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    padding: 15px;
+.gch-bottom-1:hover, .gch-bottom-2:hover {
+    transform: translateY(-5px);
+    background-color: #cfe9e4;
 }
 
-.ville{
-    /* display: flex; */
+input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
-.result{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #2e8b57;
-    padding-bottom: 15px;
+input[type="text"]:focus {
+    border-color: #4a7c59;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #4a7c59;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #366a4b;
+}
+
+#weatherResult {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #333;
 }
 
 
