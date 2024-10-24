@@ -79,7 +79,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #FA944B;
+    color: #8c9b8a;
     text-decoration: none;
 }
 
@@ -379,7 +379,7 @@ header {
     font-size: 1rem;
 }
 
-.parti-rech button {
+/* .parti-rech button {
     height: 45px;
     padding: 0 20px;
     background-color: #4a7c59;
@@ -388,7 +388,7 @@ header {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+} */
 
 .parti-rech button:hover {
     background-color: #366a4b;
@@ -644,4 +644,6 @@ footer {
   .social-network a {
     background-color: #F9F9F9;
   }
+  
+
   
