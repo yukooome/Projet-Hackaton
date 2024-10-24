@@ -17,6 +17,7 @@
 
      <!-- js -->
      <script defer src="./api-info.js"></script>
+     <script defer src="./modal-game.js"></script>
 
 </head>
 <body>
@@ -66,7 +67,22 @@
         <div class="box-arbre">
           
         </div>
-        <div class="box-game"></div>
+        
+        <div class="box-game">
+          <h2>Bienvenue dans le jeu !</h2>
+          <p>Cliquez sur le bouton ci-dessous pour commencer une aventure immersive.</p>
+          <button id="openModal" class="cta-button">Démarrer le jeu</button>
+      
+          <!-- Modal -->
+          <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>Jeu en plein écran</h2>
+                  <p>Ceci est un jeu passionnant !</p>
+              </div>
+          </div>
+      </div>
+      
 
       </div>
 
