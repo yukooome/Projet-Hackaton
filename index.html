@@ -15,6 +15,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
 
+     <!-- js -->
+     <script defer src="./api-info.js"></script>
+
 </head>
 <body>
     
@@ -66,7 +69,7 @@
 
     </section>
 
-    <section class="api-info">
+    <!-- <section class="api-info">
       <div class="container-api">
         <div class="gauche">
           <div class="gch-top">
@@ -88,6 +91,52 @@
 
       </div>
 
+    </section> -->
+    
+    <section class="api-info">
+      <div class="container-api">
+        <div class="gauche">
+          <div class="gch-top">
+            <div class="gch-top-1" id="jsp">
+              <h3>jsp</h3>
+              <p>Chargement des données ...</p>
+            </div>
+            <!-- Bloc Empreinte Carbone -->
+            <div class="gch-top-2" id="empreinte-carbone">
+              <h3>Empreinte carbone</h3>
+              <p>Calcul de votre empreinte carbone en cours...</p>
+            </div>
+            <!-- Bloc Information supplémentaire (ex. Green IT) -->
+            <div class="gch-top-3">
+              <h3>Green IT</h3>
+              <p>Nos actions pour un monde plus vert grâce à l'informatique durable.</p>
+            </div>
+          </div>
+    
+          <!-- Partie inférieure gauche : autres informations Green IT -->
+          <div class="gch-bottom">
+            <!-- Bloc d'avantage Green IT -->
+            <div class="gch-bottom-1">
+              <h3>Économie d'énergie</h3>
+              <p>Nos services réduisent la consommation d'énergie de 20% en moyenne.</p>
+            </div>
+            <!-- Bloc d'engagement environnemental -->
+            <div class="gch-bottom-2">
+              <h3>Météo</h3>
+        <input type="text" id="city" placeholder="Entrez une ville">
+        <button id="getWeather">Obtenir la météo</button>
+        
+        <div id="weatherResult" class="result"></div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Section droite : graphique ou image -->
+        <div class="droite">
+          <h3>Visualisation</h3>
+          <img src="graphique-green-it.png" alt="Graphique Green IT" />
+        </div>
+      </div>
     </section>
     
     
