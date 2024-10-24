@@ -5,15 +5,43 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f7f6;
     color: #333;
+    font-size: 16px; /* Taille de base */
+    line-height: 1.6; /* Bonne lisibilité */
 }
+
+/* Harmonisation des titres */
+h1 {
+    font-size: 2.5rem; /* Plus grand pour les titres principaux */
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p, a, li {
+    font-size: 1rem; /* Texte normal */
+}
+
+
+
 header {
     background-color: #2e8b57;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre subtile */
 }
+
 
 .navbar {
     display: flex;
@@ -57,22 +85,6 @@ header {
 
 
 
-/* Ajout de styles pour la version mobile */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 0 20px;
-    }
-    .nav-links {
-        flex-direction: column;
-        gap: 15px; /* Espacement réduit pour les petits écrans */
-    }
-    .logo img {
-        height: 60px; /* Réduire la taille du logo pour mobile */
-    }
-}
-
-
 
 /* section accueil */
 .accueil {
@@ -87,7 +99,7 @@ header {
 
 .hero-content h2 {
     font-size: 48px;
-    margin-bottom: 20px;
+    /* margin-bottom: 0px; */
 }
 
 .hero-content p {
@@ -385,7 +397,7 @@ header {
     /* Section contact */
     .contact{
         /* background-color: #007bb7; */
-        height: 50vh;
+        height: 60vh;
     }
     .formulaire {
         display: flex;
