@@ -38,7 +38,7 @@ p, a, li {
 
 
 header {
-    background-color: #2e8b57;
+    background-color: #22854d;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre subtile */
 }
 
@@ -79,7 +79,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #FA944B;
+    color: #8c9b8a;
     text-decoration: none;
 }
 
@@ -163,116 +163,74 @@ header {
 
 
 /* projet-all */
-.projet-all {
-    width: 100%; /* Assurez-vous que la section utilise toute la largeur */
-    height: 100vh;
+.projet-all{
+    width: 100%;
+    height: 60vh;
+    /* background-color: #007bb7; */
     display: flex;
-    align-items: center;
+    align-items: center ;
     justify-content: center;
 }
 
-.box {
-    width: 100%; /* Utiliser toute la largeur de l'écran */
-    height: 100%; /* Ajuster la hauteur */
+.box-index{
+    width: 80%;
+    height: 90%;
+    /* background-color: #44dd68; */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.box-arbre {
-    width: 100%; /* Utiliser 50% de l'espace disponible */
+.box-arbre-index{
+    width: 45%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    align-items: center;
-    justify-content: center;
-    background-image: url('/images/arbre.png');
+    background-color: #eaf4f1;
+    border-radius: 5%;
+    padding: 15px;
 }
 
-
-
-/* Ajuster les feuilles */
-.leaf-card {
-    position: absolute;
-    width: 100px;
-    height: 80px;
-    background-color: #2e8b57;
-    color: whitesmoke;
-    font-size: smaller;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+.box-game{
+    width: 45%;
+    height: 100%;
+    background-color: #e1f2e7;
+    border-radius: 5%;
+    padding: 15px;
+    color: #16222A;
 }
 
-.leaf-card:hover {
-    transform: scale(1.1);
-}
-
-/* Modal Styles */
-
-.modal {
-    display: none; /* La modal est masquée par défaut */
+.modal-index {
+    display: none; 
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999; /* Pour s'assurer que la modal est au-dessus des autres éléments */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left:700px;
-    margin-top:440px
-}
-
-/* Contenu de la modal */
-.modal-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
-    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 80%;
-    max-width: 500px; /* Largeur maximale */
-    position: relative;
+    height:80%
+}
+.modal-content-index {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    position: relative; 
+    height: 100%; 
 }
 
-/* Bouton de fermeture */
-.close {
+.close-index {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
+    top: 0px;
+    right: 0px;
     cursor: pointer;
+    font-size: 24px;
 }
 
-
-
-/* Positionnement des feuilles sur les branches avec top/left */
-.leaf-card:nth-child(1) { /*front end*/
-    top: 245px;
-    right:760px;
-}
-
-.leaf-card:nth-child(2) {/*backend*/
-    top: 680px;
-    right: 350px;
-}
-
-.leaf-card:nth-child(3) { /*hebergement*/
-    top: 450px;
-    right: 590px;
-}
-
-.leaf-card:nth-child(4) { /*reseaux*/
-    top: 310px;
-    left: 465px;
-}
-
-.leaf-card:nth-child(5) {/*ux ui*/
-    top: 650px;
-    left: 420px;
+.close-index:hover,
+.close-index:focus {
+    color: red; 
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -322,6 +280,7 @@ header {
     background-color: #eaf4f1;
     border-radius: 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -407,7 +366,7 @@ header {
     font-size: 1rem;
 }
 
-.parti-rech button {
+/* .parti-rech button {
     height: 45px;
     padding: 0 20px;
     background-color: #4a7c59;
@@ -416,7 +375,7 @@ header {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
+} */
 
 .parti-rech button:hover {
     background-color: #366a4b;
@@ -673,7 +632,118 @@ footer {
     background-color: #F9F9F9;
   }
 
-/* projet */
+/* projet-all */
+.projet-all {
+    width: 100%; /* Assurez-vous que la section utilise toute la largeur */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    width: 100%; /* Utiliser toute la largeur de l'écran */
+    height: 100%; /* Ajuster la hauteur */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-arbre {
+    width: 100%; /* Utiliser 50% de l'espace disponible */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/images/arbre.png');
+}
+
+
+
+/* Ajuster les feuilles */
+.leaf-card {
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    background-color: #2e8b57;
+    color: whitesmoke;
+    font-size: smaller;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.leaf-card:hover {
+    transform: scale(1.1);
+}
+
+/* Modal Styles */
+
+.modal {
+    display: none; /* La modal est masquée par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; /* Pour s'assurer que la modal est au-dessus des autres éléments */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:700px;
+    margin-top:440px
+}
+
+/* Contenu de la modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px; /* Largeur maximale */
+    position: relative;
+}
+
+/* Bouton de fermeture */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+/* Positionnement des feuilles sur les branches avec top/left */
+.leaf-card:nth-child(1) { /*front end*/
+    top: 245px;
+    right:760px;
+}
+
+.leaf-card:nth-child(2) {/*backend*/
+    top: 680px;
+    right: 350px;
+}
+
+.leaf-card:nth-child(3) { /*hebergement*/
+    top: 450px;
+    right: 590px;
+}
+
+.leaf-card:nth-child(4) { /*reseaux*/
+    top: 310px;
+    left: 465px;
+}
+
+.leaf-card:nth-child(5) {/*ux ui*/
+    top: 650px;
+    left: 420px;
+}
 .projet{
     width: 100%;
     height: 60vh;
@@ -707,4 +777,4 @@ footer {
     padding: 15px;
     color: #16222A;
 }
-  
+
