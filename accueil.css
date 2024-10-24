@@ -75,220 +75,51 @@ header {
 
 
 /* section accueil */
-.accueil {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./image/R.jpg') no-repeat center center/cover;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-}
-
-.hero-content h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 20px;
-    margin-bottom: 30px;
-}
-
-.cta-button {
-    background-color: #3cb371;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #2e8b57;
-}
-
-
-
-/* section about */
-.about {
-    display: flex;
-    height: 500px;
-    width: 100%;
-    background-color: #fff; /* La couleur de fond */
-    align-items: center;
-    justify-content: center; /* Centrer horizontalement */
-    padding: 50px;
-    text-align: center;
-}
-
-.all-about {
-    display: flex;
-    width: 80%;
-    align-items: center;
-    justify-content: center; /* Assure que le contenu de cette div est centré */
-}
-
-.a-propos-text {
-    margin: 0 auto; /* Centre le texte */
-    text-align: center; /* Centre le texte à l'intérieur de la div */
-    justify-content: space-between; /* Non nécessaire ici */
-    line-height: 1.6; /* Augmente l'espacement entre les lignes pour une meilleure lisibilité */
-}
-
-.a-propos-text p {
-    margin-bottom: 20px; /* Ajoute un espace entre les paragraphes */
-}
-
-.about img {
-    height: auto; /* Assure que l'image conserve ses proportions */
-    margin-left: 20px; /* Ajoute un peu d'espace à gauche de l'image */
-}
-
-
-
-
-
-/* projet-all */
-.projet-all{
-    width: 100%;
-    height: 60vh;
-    /* background-color: #007bb7; */
-    display: flex;
-    align-items: center ;
-    justify-content: center;
-}
-
-.box{
-    width: 80%;
-    height: 90%;
-    /* background-color: #44dd68; */
-    display: flex;
-    justify-content: space-between;
-}
-
-.box-arbre{
-    width: 45%;
-    height: 100%;
-    background-color: #f5b8b2;
-    border-radius: 5%;
-}
-
-.box-game{
-    width: 45%;
-    height: 100%;
-    background-color: #FA944B;
-    border-radius: 5%;
-}
-
-
-
-
-
-
-
-/* api-info */
-.api-info{
+.api-info {
     width: 100%;
     height: 65vh;
-    /* background-color: #007bb7; */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #275831;
-    
+    color: #2B5932; /* Vert foncé pour le texte */
 }
 
-.container-api{
+.container-api {
     height: 80%;
     width: 80%;
-    /* background-color: #FA944B; */
     display: flex;
-
 }
 
-.gauche{
+.gauche {
     height: 100%;
     width: 70%;
-    /* background-color: #3cb371; */
     display: flex;
     flex-direction: column;
-
 }
 
-.droite{
+.droite {
     height: 100%;
     width: 30%;
-    background-color: #F7D1BA;
-    border-radius: 20%;
+    background-color: #A3C9A8; /* Vert clair pour la section de droite */
+    border-radius: 5%; /* Réduction du radius pour un style plus sobre */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     padding: 15px;
-
 }
 
-.gch-top{
+.gch-top {
     height: 50%;
     width: 95%;
-    /* background-color: #1a91b9; */
-    display: flex;
-    justify-content: space-between;
-    
-
-}
-
-.gch-top-1{
-    height: 90%;
-    width: 30%;
-    background-color: #A8D5BA;
-    border-radius: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    padding: 15px;
-}
-
-.gch-top-2{
-    height: 90%;
-    width: 30%;
-    background-color: #F4C7C3;
-    border-radius: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    padding: 15px;
-}
-
-.gch-top-3{
-    height: 90%;
-    width: 30%;
-    background-color: #F8E3A1;
-    border-radius: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    padding: 15px;
-}
-
-.gch-bottom{
-    height: 50%;
-    width: 95%;
-    /* background-color: #1fb91a; */
     display: flex;
     justify-content: space-between;
 }
 
-.gch-bottom-1{
-    height: 100%;
-    width: 47%;
-    background-color: #D9C2E9;
-    border-radius: 5%;
+.gch-top-1, .gch-top-2, .gch-top-3 {
+    height: 90%;
+    width: 30%;
+    border-radius: 10px; /* Bordures plus discrètes */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -296,11 +127,29 @@ header {
     padding: 15px;
 }
 
-.gch-bottom-2{
+.gch-top-1 {
+    background-color: #8DB596; /* Vert doux */
+}
+
+.gch-top-2 {
+    background-color: #BFDABD; /* Vert pastel pour un contraste plus clair */
+}
+
+.gch-top-3 {
+    background-color: #6E8F72; /* Vert légèrement plus sombre pour équilibrer */
+}
+
+.gch-bottom {
+    height: 50%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gch-bottom-1, .gch-bottom-2 {
     height: 100%;
     width: 47%;
-    background-color: #B8DDE1;
-    border-radius: 5%;
+    border-radius: 5px; /* Bordures plus discrètes */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -308,18 +157,27 @@ header {
     padding: 15px;
 }
 
-.ville{
-    /* display: flex; */
+.gch-bottom-1 {
+    background-color: #A8C4B3; /* Un autre vert subtil */
 }
 
-.result{
+.gch-bottom-2 {
+    background-color: #86A89D; /* Vert plus foncé */
+}
+
+.ville {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #2e8b57;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #2B5932; /* Harmonisation avec le texte global */
     padding-bottom: 15px;
 }
-
 
 
 
