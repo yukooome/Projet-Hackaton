@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoClick</title>
     <link rel="stylesheet" href="accueil.css">
+    <link rel="stylesheet" href="./sounya/arbre.css">
+    <script src="./sounya/arbre.js" defer></script>
 
 
 
@@ -63,7 +65,33 @@
 
     <section class="projet-all">
       <div class="box">
-        <div class="box-arbre"></div>
+        <div class="box-arbre"> <div class="box-arbre"> 
+
+          <!-- Conteneur pour les feuilles -->
+          <div id="leaves-container"> </div>
+      
+          <!-- Modal -->
+      
+           <!-- Modal Structure -->
+      <div id="infoModal" class="modal">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2 id="modal-theme"></h2> <!-- Thème -->
+              <h1 id="modal-title"></h1> <!-- Titre -->
+              <p id="modal-text"></p> <!-- Description -->
+          </div>
+      </div>
+      
+      <!--close modal-->
+          <div id="infoModal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <p id="modal-text"></p>
+              </div>
+          </div></div>
+          <div class="box-game"></div>
+  
+        </div></div>
         <div class="box-game"></div>
 
       </div>
