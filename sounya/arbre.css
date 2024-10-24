@@ -12,7 +12,7 @@ body {
     border: 1px solid #ccc;
     padding: 16px;
     margin: 10px;
-    width: 200px;
+    width: 100px;
     text-align: center;
     cursor: pointer;
     border-radius: 8px;
@@ -79,9 +79,11 @@ a{
 
 .leaf-card {
     position: absolute; 
-    width: 100px;
-    height: 100px;
-    background-color: rgba(0, 255, 0, 0.5);
+    width: 150px;
+    height: 60px;
+    background-color:#2e8b57;
+    color:whitesmoke;
+    font-size:smaller;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -97,28 +99,28 @@ a{
 
 /* Positionnement des feuilles sur les branches avec top/left */
 .leaf-card:nth-child(1) { /*front end*/
-    top: 100px;
-    left: 900px;
+    top: 142px;
+    right:745px;
 }
 
 .leaf-card:nth-child(2) {/*backend*/
-    top: 700px;
-    right: 500px;
+    top: 580px;
+    right: 330px;
 }
 
 .leaf-card:nth-child(3) { /*hebergement*/
     top: 350px;
-    right: 500px;
+    right: 572px;
 }
 
 .leaf-card:nth-child(4) { /*reseaux*/
-    top: 350px;
-    left: 500px;
+    top: 215px;
+    left: 450px;
 }
 
 .leaf-card:nth-child(5) {/*ux ui*/
-    top: 700px;
-    left: 500px;
+    top: 556px;
+    left: 320px;
 }
 
 /* Thème, Titre et Description */
