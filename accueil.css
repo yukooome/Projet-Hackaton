@@ -38,7 +38,7 @@ p, a, li {
 
 
 header {
-    background-color: #2e8b57;
+    background-color: #22854d;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre subtile */
 }
 
@@ -293,6 +293,7 @@ header {
     background-color: #eaf4f1;
     border-radius: 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
