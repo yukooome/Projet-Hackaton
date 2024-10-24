@@ -46,7 +46,7 @@
           
           <h4>Explorez les Options de Green IT</h4>
           <p>Cliquez sur le bouton ci-dessous pour découvrir les différentes options et pratiques de Green IT. Cet arbre décisionnel vous guidera à travers les meilleures stratégies pour rendre votre utilisation des technologies plus respectueuse de l'environnement.</p>
-          <button class="cta-btn" onclick="window.location.href='{{ path('app_arbre') }}'">Explorez les options de Green IT</button>
+          <button class="cta-button" onclick="window.location.href='{{ path('app_arbre') }}'">Explorez les options de Green IT</button>
 
 
 
@@ -116,8 +116,8 @@
     
         <!-- Section droite : graphique ou image -->
         <div class="droite">
-          <h3>Visualisation</h3>
-          <img src="graphique-green-it.png" alt="Graphique Green IT" />
+          {# <h3>Visualisation</h3> #}
+          <img src="{{ asset('images/graphique-green-it.webp') }}" alt="Graphique Green IT" />
         </div>
       </div>
     </section>
