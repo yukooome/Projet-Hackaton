@@ -17,6 +17,7 @@
 
      <!-- js -->
      <script defer src="./api-info.js"></script>
+     <script defer src="./modal-game.js"></script>
 
 </head>
 <body>
@@ -63,36 +64,57 @@
 
     <section class="projet-all">
       <div class="box">
-        <div class="box-arbre"></div>
-        <div class="box-game"></div>
+        <div class="box-arbre">
+          
+          <h2>Adoptez des Pratiques de Green IT</h2>
+          <p>Dans un monde où les préoccupations environnementales prennent de plus en plus d'importance, il est essentiel d'adopter des pratiques écologiques en informatique, également connues sous le nom de Green IT. Cela implique non seulement de réduire l'empreinte carbone des technologies de l'information, mais aussi de promouvoir des méthodes durables dans toutes les facettes de l'informatique.</p>
+          
+          <h4>Pourquoi le Green IT est-il important ?</h4>
+          <p>Les technologies de l'information consomment une quantité significative d'énergie et de ressources. En intégrant des pratiques de Green IT, nous pouvons .</p>
+          <!-- <ul>
+              <li>Réduire la consommation d'énergie.</li>
+              <li>Minimiser les déchets électroniques.</li>
+              <li>Promouvoir l'utilisation de logiciels et de matériel écologiques.</li>
+              <li>Encourager le télétravail et d'autres solutions.</li>
+          </ul> -->
+          
+          <h4>Explorez les Options de Green IT</h4>
+          <p>Cliquez sur le bouton ci-dessous pour découvrir les différentes options et pratiques de Green IT. Cet arbre décisionnel vous guidera à travers les meilleures stratégies pour rendre votre utilisation des technologies plus respectueuse de l'environnement.</p>
+          <button class="btn" onclick="window.location.href='./sounya/arbre.html'">Explorez les options de Green IT</button>
+
+
+        </div>
+        
+        <div class="box-game" id="jeu">
+          <h2>Bienvenue dans le jeu !</h2>
+          <p>Cliquez sur le bouton ci-dessous pour commencer une aventure immersive.</p>
+          <p>L'utilisation des ressources en eau dans les systèmes de refroidissement joue un rôle crucial dans l'industrie technologique, notamment dans les centres de données, qui sont des installations indispensables pour le secteur IT. Ces centres, essentiels pour le fonctionnement des services en ligne, requièrent d'importantes quantités d'eau pour maintenir des températures optimales.
+
+            L'utilisation responsable de l'eau est un thème important dans le Green IT, une approche qui vise à réduire l'impact environnemental des technologies de l'information. En intégrant des pratiques durables dans la gestion des ressources en eau, l'industrie peut non seulement diminuer son empreinte écologique, mais aussi contribuer à la préservation de cette ressource précieuse.
+            
+            Dans ce mini-jeu, cliquez pour créer une base de données et observez les changements qu'elle entraîne sur l'environnement ! En prenant des décisions éclairées, vous découvrirez comment la gestion de l'eau et les technologies vertes peuvent coexister pour créer un avenir plus durable. Êtes-vous prêt à relever le défi ?</p>
+          <button id="openModal" class="cta-button">Démarrer le jeu</button>
+      
+          <!-- Modal -->
+          <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>Jeu en plein écran</h2>
+                  <p>Ceci est un jeu passionnant !</p>
+              </div>
+          </div>
+      </div>
+      
 
       </div>
 
     </section>
 
-    <!-- <section class="api-info">
-      <div class="container-api">
-        <div class="gauche">
-          <div class="gch-top">
-            <div class="gch-top-1"></div>
-            <div class="gch-top-2"></div>
-            <div class="gch-top-3"></div>
 
-          </div>
-          <div class="gch-bottom">
-            <div class="gch-bottom-1"></div>
-            <div class="gch-bottom-2"></div>
 
-          </div>
 
-        </div>
-        <div class="droite">
 
-        </div>
 
-      </div>
-
-    </section> -->
     
     <section class="api-info">
       <div class="container-api">
@@ -124,8 +146,10 @@
             <!-- Bloc d'engagement environnemental -->
             <div class="gch-bottom-2">
               <h3>Météo</h3>
-        <input type="text" id="city" placeholder="Entrez une ville">
-        <button id="getWeather">Obtenir la météo</button>
+        <div class="parti-rech">
+          <input type="text" id="city" placeholder="Entrez une ville">
+        <button id="getWeather">météo</button>
+        </div>
         
         <div id="weatherResult" class="result"></div>
             </div>

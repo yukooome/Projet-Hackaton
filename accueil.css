@@ -5,15 +5,43 @@
     box-sizing: border-box;
 }
 
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f7f6;
     color: #333;
+    font-size: 16px; /* Taille de base */
+    line-height: 1.6; /* Bonne lisibilité */
 }
+
+/* Harmonisation des titres */
+h1 {
+    font-size: 2.5rem; /* Plus grand pour les titres principaux */
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p, a, li {
+    font-size: 1rem; /* Texte normal */
+}
+
+
+
 header {
     background-color: #2e8b57;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre subtile */
 }
+
 
 .navbar {
     display: flex;
@@ -57,22 +85,6 @@ header {
 
 
 
-/* Ajout de styles pour la version mobile */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 0 20px;
-    }
-    .nav-links {
-        flex-direction: column;
-        gap: 15px; /* Espacement réduit pour les petits écrans */
-    }
-    .logo img {
-        height: 60px; /* Réduire la taille du logo pour mobile */
-    }
-}
-
-
 
 /* section accueil */
 .accueil {
@@ -87,7 +99,7 @@ header {
 
 .hero-content h2 {
     font-size: 48px;
-    margin-bottom: 20px;
+    /* margin-bottom: 0px; */
 }
 
 .hero-content p {
@@ -171,15 +183,67 @@ header {
 .box-arbre{
     width: 45%;
     height: 100%;
-    background-color: #f5b8b2;
+    background-color: #eaf4f1;
     border-radius: 5%;
+    padding: 15px;
 }
 
 .box-game{
     width: 45%;
     height: 100%;
-    background-color: #FA944B;
+    background-color: #e1f2e7;
     border-radius: 5%;
+    padding: 15px;
+    color: #16222A;
+}
+
+
+
+
+/* Modal */
+.modal {
+    display: none; /* Cachée par défaut */
+    position: fixed; /* Reste fixe à l'écran */
+    z-index: 1000; /* Au-dessus de tout le reste */
+    left: 0;
+    top: 0;
+    width: 100%; /* Prend tout l'écran */
+    height: 100%; /* Prend tout l'écran */
+    overflow: auto; /* Ajoute un défilement si nécessaire */
+    background-color: rgba(0, 0, 0, 0.8); /* Fond sombre transparent */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Fond de la modal */
+    margin: auto; /* Centre la modal */
+    padding: 20px;
+    border: 1px solid #888; /* Bord de la modal */
+    width: 80%; /* Largeur de la modal */
+    max-width: 600px; /* Largeur maximale pour éviter un trop grand affichage */
+    height: 50%; /* Hauteur de la modal */
+    position: absolute; /* Position absolue pour centrer verticalement */
+    top: 50%; /* Se place à 50% de l'écran */
+    left: 50%; /* Se place à 50% de l'écran */
+    transform: translate(-160%, -50%); /* Centre la modal parfaitement */
+    border-radius: 10px; /* Coins arrondis */
+    text-align: center; /* Centre le texte */
+}
+
+.close {
+    /* color: #aaa;  */
+    position: absolute;
+    top: 10px; 
+    right: 15px; 
+    font-size: 28px; 
+    font-weight: bold; 
+    transition: color 0.3s; 
+}
+
+.close:hover,
+.close:focus {
+    color: red; 
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -188,7 +252,8 @@ header {
 
 
 
-/* api-info */
+
+/* Conteneur principal */
 .api-info {
     width: 100%;
     height: 65vh;
@@ -200,6 +265,7 @@ header {
     background-color: #f0f8f5;
 }
 
+/* Conteneur API */
 .container-api {
     height: 80%;
     width: 80%;
@@ -210,6 +276,7 @@ header {
     background-color: #fff;
 }
 
+/* Section gauche */
 .gauche {
     height: 100%;
     width: 70%;
@@ -219,6 +286,7 @@ header {
     padding: 20px;
 }
 
+/* Section droite */
 .droite {
     height: 100%;
     width: 30%;
@@ -240,6 +308,7 @@ header {
     border-radius: 10px;
 }
 
+/* Sections Green IT */
 .gch-top, .gch-bottom {
     display: flex;
     gap: 20px;
@@ -267,20 +336,11 @@ header {
     background-color: #d4edda;
 }
 
-.gch-top h3, .gch-bottom h3 {
-    font-size: 1.2rem;
-    color: #4a7c59;
-}
-
-.gch-top p, .gch-bottom p {
-    font-size: 1rem;
-    color: #555;
-}
-
 .gch-bottom {
     height: 50%;
 }
 
+/* Météo - section du bas */
 .gch-bottom-1, .gch-bottom-2 {
     flex: 1;
     background-color: #e6f2ef;
@@ -295,40 +355,73 @@ header {
     background-color: #cfe9e4;
 }
 
-input[type="text"] {
-    width: 80%;
-    padding: 8px;
+/* Alignement de la météo */
+.parti-rech {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    transition: border-color 0.3s ease;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-input[type="text"]:focus {
-    border-color: #4a7c59;
+/* Champ de saisie et bouton */
+.parti-rech input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
 }
 
-button {
-    padding: 8px 12px;
+.parti-rech button {
+    height: 45px;
+    padding: 0 20px;
     background-color: #4a7c59;
-    color: #fff;
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 10px;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.parti-rech button:hover {
     background-color: #366a4b;
 }
 
+/* Affichage des résultats météo */
 #weatherResult {
     margin-top: 15px;
     font-size: 1rem;
     color: #333;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .parti-rech {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .parti-rech input,
+    .parti-rech button {
+        width: 100%;
+    }
+
+    .parti-rech button {
+        margin-top: 10px;
+    }
+}
+
+
 
 
 
@@ -357,7 +450,7 @@ button:hover {
     /* Section contact */
     .contact{
         /* background-color: #007bb7; */
-        height: 50vh;
+        height: 60vh;
     }
     .formulaire {
         display: flex;
