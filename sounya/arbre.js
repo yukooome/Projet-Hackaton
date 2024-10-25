@@ -42,3 +42,5 @@ document.addEventListener('DOMContentLoaded', () => {
 document.querySelector('.close').addEventListener('click', function() {
     document.getElementById('infoModal').style.display = 'none';
 });
+
+

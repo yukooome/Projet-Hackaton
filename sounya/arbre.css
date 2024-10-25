@@ -121,18 +121,68 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left:700px;
-    margin-top:440px
+    margin-top:300px;
+    margin-left: 500px;
+    width:900px;
 }
 
 /* Contenu de la modal */
 .modal-content {
-    background-color: white;
+    color:#3a7351;
     padding: 20px;
     border-radius: 8px;
-    width: 80%;
-    max-width: 500px; /* Largeur maximale */
+    font-size:30px;
+    width: 100%;
+   height: 60%;
+   justify-content: center;
+   align-items: center;
     position: relative;
+    overflow-y: scroll; 
+}
+
+/* Style de la barre de défilement pour Chrome, Safari, Edge */
+.modal-content::-webkit-scrollbar {
+    width: 8px; 
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #3a7351; 
+    border-radius: 20px; 
+    border: 2px solid transparent; 
+    background-clip: padding-box; /* Empêche la couleur de fond d’aller sous le bord transparent */
+}
+
+.modal-content::-webkit-scrollbar-button {
+    display: none; /* Supprime les flèches de la barre de défilement */
+}
+
+/* Personnalisation pour Firefox */
+.modal-content {
+    scrollbar-color: #3a7351 transparent; /* Couleur du curseur et fond transparent */
+    scrollbar-width: thin; /* Barre de défilement fine pour un design épuré */
+}
+
+#modal-theme{
+color: #3a7351;
+font-size: 2rem;
+width: 80%;
+}
+
+#modal-title{ 
+color: #3a7351;
+width: 80%;
+font-size: 1.75rem;
+}
+
+#modal-text{
+color: #3a7351;
+width: 80%;
+font-size: 15px;
+height: 80%;
 }
 
 /* Bouton de fermeture */
