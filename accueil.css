@@ -79,7 +79,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #8c9b8a;
+    color: #a8cdb7;
     text-decoration: none;
 }
 
@@ -119,6 +119,8 @@ header {
 
 .cta-button:hover {
     background-color: #2e8b57;
+    text-decoration: none;
+    color: #a8cdb7;
 }
 
 
@@ -391,7 +393,9 @@ header {
 } */
 
 .parti-rech button:hover {
-    background-color: #366a4b;
+    background-color: #2e8b57;
+    text-decoration: none;
+    color: #a8cdb7;
 }
 
 /* Affichage des résultats météo */
