@@ -1,0 +1,653 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    font-size: 16px; /* Taille de base */
+    line-height: 1.6; /* Bonne lisibilité */
+}
+
+/* Harmonisation des titres */
+h1 {
+    font-size: 2.5rem; /* Plus grand pour les titres principaux */
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p, a, li {
+    font-size: 1rem; /* Texte normal */
+}
+
+
+
+header {
+    background-color: #22854d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre subtile */
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.logo {
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 60px; /* Diminuer un peu la taille pour plus de finesse */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espacer uniformément les liens */
+}
+
+.nav-links li {
+    margin: 0; /* Supprimer les marges, remplacées par le gap */
+    margin-top: 10px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight:bolder;
+    font-family: 'Roboto', sans-serif; /* Utiliser une police moderne */
+    transition: color 0.3s ease; /* Ajouter une transition fluide sur le hover */
+}
+
+.nav-links a:hover {
+    color: #a8cdb7;
+    text-decoration: none;
+}
+
+
+
+
+/* section accueil */
+.accueil {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./image/R.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    /* margin-bottom: 0px; */
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #3cb371;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #2e8b57;
+    text-decoration: none;
+    color: #a8cdb7;
+}
+
+
+
+/* section about */
+.about {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    background-color: #fff; /* La couleur de fond */
+    align-items: center;
+    justify-content: center; /* Centrer horizontalement */
+    padding: 50px;
+    text-align: center;
+}
+
+.all-about {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: center; /* Assure que le contenu de cette div est centré */
+}
+
+.a-propos-text {
+    margin: 0 auto; /* Centre le texte */
+    text-align: center; /* Centre le texte à l'intérieur de la div */
+    justify-content: space-between; /* Non nécessaire ici */
+    line-height: 1.6; /* Augmente l'espacement entre les lignes pour une meilleure lisibilité */
+}
+
+.a-propos-text p {
+    margin-bottom: 20px; /* Ajoute un espace entre les paragraphes */
+}
+
+.about img {
+    height: auto; /* Assure que l'image conserve ses proportions */
+    margin-left: 20px; /* Ajoute un peu d'espace à gauche de l'image */
+}
+
+
+
+
+
+/* projet-all */
+.projet-all{
+    width: 100%;
+    height: 60vh;
+    /* background-color: #007bb7; */
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+}
+
+.box{
+    width: 80%;
+    height: 90%;
+    /* background-color: #44dd68; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-arbre{
+    width: 45%;
+    height: 100%;
+    background-color: #eaf4f1;
+    border-radius: 5%;
+    padding: 15px;
+}
+
+.box-game{
+    width: 45%;
+    height: 100%;
+    background-color: #e1f2e7;
+    border-radius: 5%;
+    padding: 15px;
+    color: #16222A;
+}
+
+
+
+
+/* Modal */
+.modal {
+    display: none; /* Cachée par défaut */
+    position: fixed; /* Reste fixe à l'écran */
+    z-index: 1000; /* Au-dessus de tout le reste */
+    left: 0;
+    top: 0;
+    width: 100%; /* Prend tout l'écran */
+    height: 100%; /* Prend tout l'écran */
+    overflow: auto; /* Ajoute un défilement si nécessaire */
+    background-color: rgba(0, 0, 0, 0.8); /* Fond sombre transparent */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Fond de la modal */
+    margin: auto; /* Centre la modal */
+    padding: 20px;
+    border: 1px solid #888; /* Bord de la modal */
+    width: 80%; /* Largeur de la modal */
+    max-width: 600px; /* Largeur maximale pour éviter un trop grand affichage */
+    height: 50%; /* Hauteur de la modal */
+    position: absolute; /* Position absolue pour centrer verticalement */
+    top: 50%; /* Se place à 50% de l'écran */
+    left: 50%; /* Se place à 50% de l'écran */
+    transform: translate(-160%, -50%); /* Centre la modal parfaitement */
+    border-radius: 10px; /* Coins arrondis */
+    text-align: center; /* Centre le texte */
+}
+
+.close {
+    /* color: #aaa;  */
+    position: absolute;
+    top: 10px; 
+    right: 15px; 
+    font-size: 28px; 
+    font-weight: bold; 
+    transition: color 0.3s; 
+}
+
+.close:hover,
+.close:focus {
+    color: red; 
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* Conteneur principal */
+.api-info {
+    width: 100%;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f0f8f5;
+}
+
+/* Conteneur API */
+.container-api {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    gap: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Section gauche */
+.gauche {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Section droite */
+.droite {
+    height: 100%;
+    width: 30%;
+    background-color: #eaf4f1;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.droite h3 {
+    text-align: center;
+    color: #4a7c59;
+}
+
+.droite img {
+    width: 90%;
+    border-radius: 10px;
+}
+
+/* Sections Green IT */
+.gch-top, .gch-bottom {
+    display: flex;
+    gap: 20px;
+}
+
+.gch-top {
+    height: 50%;
+}
+
+.gch-top-1, .gch-top-2, .gch-top-3 {
+    flex: 1;
+    background-color: #e1f2e7;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.gch-top-1:hover, .gch-top-2:hover, .gch-top-3:hover {
+    transform: translateY(-5px);
+    background-color: #d4edda;
+}
+
+.gch-bottom {
+    height: 50%;
+}
+
+/* Météo - section du bas */
+.gch-bottom-1, .gch-bottom-2 {
+    flex: 1;
+    background-color: #e6f2ef;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.gch-bottom-1:hover, .gch-bottom-2:hover {
+    transform: translateY(-5px);
+    background-color: #cfe9e4;
+}
+
+/* Alignement de la météo */
+.parti-rech {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Champ de saisie et bouton */
+.parti-rech input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+/* .parti-rech button {
+    height: 45px;
+    padding: 0 20px;
+    background-color: #4a7c59;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} */
+
+.parti-rech button:hover {
+    background-color: #2e8b57;
+    text-decoration: none;
+    color: #a8cdb7;
+}
+
+/* Affichage des résultats météo */
+#weatherResult {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    .parti-rech {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .parti-rech input,
+    .parti-rech button {
+        width: 100%;
+    }
+
+    .parti-rech button {
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* section service */
+.services {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.service-card {
+    background-color: #f0f4f1;
+    border: 1px solid #e0e4e1;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+
+
+
+    /* Section contact */
+    .contact{
+        /* background-color: #007bb7; */
+        height: 60vh;
+    }
+    .formulaire {
+        display: flex;
+        /* background-color: #007bb7; */
+        align-items: center;
+        justify-content: center;
+        /* padding: 50px 0; */
+    }
+
+    .for-for {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* gap: 30px; */
+    }
+
+    /* Formulaire et image auront la même taille */
+    .formu, .for-for img {
+        width: 48%; 
+    }
+
+    .for-for img {
+        height: 585px;
+        object-fit: cover; /* Ajuste l'image pour qu'elle couvre le conteneur sans se déformer */
+        border-radius: 8px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        background-color: #f0f4f1;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        height: 80%; /* Prendre toute la hauteur disponible */
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #2e8b57;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+        border-color: #3cb371;
+        outline: none;
+    }
+
+    button {
+        background-color: #3cb371;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #2e8b57;
+    }
+
+
+/*FOOTER*/
+
+footer {
+    background: #16222A;
+    background: -webkit-linear-gradient(59deg, #3a7351, #162a1a);
+    background: linear-gradient(59deg, #3a7351, #162a1a);
+    color: white;
+    margin-top:100px;
+  }
+  
+  footer a {
+    color: #fff;
+    font-size: 14px;
+    transition-duration: 0.2s;
+  }
+  
+  footer a:hover {
+    color: #FA944B;
+    text-decoration: none;
+  }
+  
+  .copy {
+    font-size: 12px;
+    padding: 10px;
+    border-top: 1px solid #FFFFFF;
+  }
+  
+  .footer-middle {
+    padding-top: 2em;
+    color: white;
+  }
+  
+  
+  /*SOCİAL İCONS*/
+  
+  /* footer social icons */
+  
+  ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0;
+  }
+  
+  ul.social-network li {
+    display: inline;
+    margin: 0 5px;
+  }
+  
+  
+  /* footer social icons */
+  
+  .social-network a.icoFacebook:hover {
+    background-color: #3B5998;
+  }
+  
+  .social-network a.icoLinkedin:hover {
+    background-color: #007bb7;
+  }
+  
+  .social-network a.icoFacebook:hover i,
+  .social-network a.icoLinkedin:hover i {
+    color: #fff;
+  }
+  
+  .social-network a.socialIcon:hover,
+  .socialHoverClass {
+    color: #44dd68;
+  }
+  
+  .social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+  
+  .social-circle li i {
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  .social-circle li a:hover i,
+  .triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  .social-circle i {
+    color: #595959;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  
+  .social-network a {
+    background-color: #F9F9F9;
+  }
+  
+
+  
