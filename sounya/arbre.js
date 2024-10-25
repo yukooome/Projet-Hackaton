@@ -13,8 +13,9 @@ function createLeafCard(leaf) {
 
     const title = document.createElement('h1');
     title.textContent = leaf.name;
+    title.style.fontSize = '15px'; // Change '18px' par la taille souhaitée
     card.appendChild(title);
-
+    
     card.addEventListener("click", () => {
         document.getElementById('modal-text').textContent = leaf.info;
         document.getElementById('infoModal').style.display = 'block';
