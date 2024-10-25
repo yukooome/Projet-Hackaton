@@ -38,9 +38,14 @@ p, a, li {
 
 
 header {
-    background-color: #22854d;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre subtile */
+    background-color: #2e8b57;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Positionnement sticky */
+    top: 0; /* Collé au sommet de la page */
+    z-index: 1000; /* S'assurer qu'il est au-dessus des autres éléments */
 }
+
 
 
 .navbar {
