@@ -1,7 +1,7 @@
 let config = {
     type: Phaser.AUTO,
     width: window.innerWidth * 0.66,
-    height: window.innerHeight,
+    height: window.innerHeight * 0.75,
     parent: 'game-container',
     physics: {
         default: 'arcade'
@@ -94,7 +94,7 @@ function create() {
     // Add an interactive image representing the data center
     data_center = this.add.image( 
         20, 
-        window.innerHeight - 80, 
+        (window.innerHeight*0.75) - 80, 
         'dbIcon').setInteractive();;
     data_center.setOrigin(0, 0);
     data_center.setScale(0.3);

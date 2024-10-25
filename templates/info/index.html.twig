@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
-
+ 
 {% block title %}Accueil - EcoClick{% endblock %}
-
-
-
+ 
+ 
+ 
 {% block body %}
 <!-- Section Accueil -->
 <section class="accueil">
@@ -14,27 +14,33 @@
         <a href="#services" class="cta-button">En savoir plus</a>
     </div>
 </section>
-
+ 
 <!-- Section À Propos -->
-<section id="about" class="about">
-    <div class="all-about">
-        <div class="a-propos-text">
-            <h2>À Propos de Nous</h2>
-            <p>Bienvenue sur EcoClick, votre plateforme dédiée à l'informatique durable. Notre mission est de rendre l'information sur le <strong>Green IT</strong> plus accessible.</p>
-            <p>Que vous soyez un particulier ou une entreprise, vous trouverez des ressources pour une démarche écoresponsable.</p>
-            <p>Optimisez vos infrastructures avec EcoClick pour un futur plus vert.</p>
-        </div>
-        <img src="{{ asset('images/homme.jpg') }}" alt="homme">
-    </div>
-</section>
+    <section id="about" class="about">
+        <div class="all-about">
+            <div class="a-propos-text">
+                <h2>À Propos de Nous</h2>
+                <p>Bienvenue sur EcoClick, votre plateforme dédiée à l'informatique durable. Notre mission est d'informer et de rendre l'information sur le <strong>Green IT</strong> plus accessible. Nous vous fournissons des informations claires et pratiques pour adopter des technologies et des pratiques informatiques plus responsables.</p>
+                
+                <p>Que vous soyez un particulier, une entreprise ou un passionné de technologie, vous trouverez ici des articles, des guides et des ressources pour vous accompagner dans votre démarche écoresponsable.</p>
+                
+                <p>De l'optimisation énergétique des infrastructures à la gestion durable des appareils électroniques, en passant par la conception de logiciels à faible empreinte carbone, EcoClick vous aide à faire des choix éclairés pour un futur plus vert.</p>
+                
+                <p>Ensemble, transformons le numérique pour qu'il devienne un levier de la transition écologique.</p>
+            </div>
+    
 
+        <img src="{{ asset('images/homme.jpg') }}" alt="homme">
+        </div>
+    </section>
+ 
 <section class="projet">
       <div class="box-index">
         <div class="box-arbre-index">
-          
+         
           <h2>Adoptez des Pratiques de Green IT</h2>
           <p>Dans un monde où les préoccupations environnementales prennent de plus en plus d'importance, il est essentiel d'adopter des pratiques écologiques en informatique, également connues sous le nom de Green IT. Cela implique non seulement de réduire l'empreinte carbone des technologies de l'information, mais aussi de promouvoir des méthodes durables dans toutes les facettes de l'informatique.</p>
-          
+         
           <h4>Pourquoi le Green IT est-il important ?</h4>
           <p>Les technologies de l'information consomment une quantité significative d'énergie et de ressources. En intégrant des pratiques de Green IT, nous pouvons .</p>
           <!-- <ul>
@@ -43,49 +49,56 @@
               <li>Promouvoir l'utilisation de logiciels et de matériel écologiques.</li>
               <li>Encourager le télétravail et d'autres solutions.</li>
           </ul> -->
-          
+         
           <h4>Explorez les Options de Green IT</h4>
           <p>Cliquez sur le bouton ci-dessous pour découvrir les différentes options et pratiques de Green IT. Cet arbre décisionnel vous guidera à travers les meilleures stratégies pour rendre votre utilisation des technologies plus respectueuse de l'environnement.</p>
           <button class="cta-button" onclick="window.location.href='{{ path('app_arbre') }}'">Explorez les options de Green IT</button>
-
-
-
+ 
+ 
+ 
         </div>
-        
+       
         <div class="box-game" id="jeu">
           <h2>Bienvenue dans le jeu !</h2>
           <p>Cliquez sur le bouton ci-dessous pour commencer une aventure immersive.</p>
           <p>L'utilisation des ressources en eau dans les systèmes de refroidissement joue un rôle crucial dans l'industrie technologique, notamment dans les centres de données, qui sont des installations indispensables pour le secteur IT. Ces centres, essentiels pour le fonctionnement des services en ligne, requièrent d'importantes quantités d'eau pour maintenir des températures optimales.
-
+ 
             L'utilisation responsable de l'eau est un thème important dans le Green IT, une approche qui vise à réduire l'impact environnemental des technologies de l'information. En intégrant des pratiques durables dans la gestion des ressources en eau, l'industrie peut non seulement diminuer son empreinte écologique, mais aussi contribuer à la préservation de cette ressource précieuse.
-            
+           
             Dans ce mini-jeu, cliquez pour créer une base de données et observez les changements qu'elle entraîne sur l'environnement ! En prenant des décisions éclairées, vous découvrirez comment la gestion de l'eau et les technologies vertes peuvent coexister pour créer un avenir plus durable. Êtes-vous prêt à relever le défi ?</p>
           <button id="openModal" class="cta-button">Démarrer le jeu</button>
-      
+     
           <!-- Modal -->
           <div id="myModal" class="modal-index">
-              <div class="modal-content-index" id="game-container">
+              <div class="modal-content-index" >
+              <div class="modal-game">
+              <div id="game-container"></div>
+              
+              </div>
                   <span class="close-index">&times;</span>
               </div>
           </div>
       </div>
-      
-
+     
+ 
       </div>
-
+ 
     </section>
+ 
     <section class="api-info">
       <div class="container-api">
         <div class="gauche">
           <div class="gch-top">
             <div class="gch-top-1" id="jsp">
-              <h3>Respirer vert</h3>
-              <p>Chargement des données ...</p>
+              <!-- <h3>Respirer vert</h3> -->
+              <!-- <p>Chargement des données ...</p> -->
+               <img src="/images/img-rem-terre.png" alt="">
             </div>
             <!-- Bloc Empreinte Carbone -->
             <div class="gch-top-2" id="empreinte-carbone">
               <h3>Empreinte carbone</h3>
-              <p>Calcul de votre empreinte carbone en cours...</p>
+              <p id="carbone-message">Calcul de votre empreinte carbone en cours...</p>
+              <p id="carbone-result"></p>
             </div>
             <!-- Bloc Information supplémentaire (ex. Green IT) -->
             <div class="gch-top-3">
@@ -93,37 +106,38 @@
               <p>Nos actions pour un monde plus vert grâce à l'informatique durable.</p>
             </div>
           </div>
-    
+   
           <!-- Partie inférieure gauche : autres informations Green IT -->
           <div class="gch-bottom">
             <!-- Bloc d'avantage Green IT -->
-            <div class="gch-bottom-1">
+            <div class="gch-bottom-1" id="economie-energie">
               <h3>Économie d'énergie</h3>
-              <p>Nos services réduisent la consommation d'énergie de 20% en moyenne.</p>
+              <p id="economie-message">Nos services réduisent la consommation d'énergie de 20% en moyenne.</p>
+              <p id="economie-details"></p>
             </div>
             <!-- Bloc d'engagement environnemental -->
             <div class="gch-bottom-2">
               <h3>Météo</h3>
         <div class="parti-rech">
           <input type="text" id="city" placeholder="Entrez une ville">
-        <button class="cta-button" id="getWeather">météo</button>
+        <button class="cta-button" id="getWeather">Voir</button>
         </div>
-        
+       
         <div id="weatherResult" class="result"></div>
             </div>
           </div>
         </div>
-    
+   
         <!-- Section droite : graphique ou image -->
         <div class="droite">
-          {# <h3>Visualisation</h3> #}
-          <img src="{{ asset('images/graphique-green-it.webp') }}" alt="Graphique Green IT" />
+          <!-- <h3>Visualisation</h3> -->
+          <img src="/images/graphique-green-it.webp" alt="Graphique Green IT" />
         </div>
       </div>
     </section>
-    
-    
-
+   
+   
+ 
     <section id="services" class="services">
         <h2>Nos Services</h2>
         <div class="service-card">
@@ -143,9 +157,9 @@
             <p>Recevez des conseils d'experts pour rendre vos processus IT plus durables, de la conception à l'exploitation.</p>
         </div>
     </section>
-    
-
-    <section id="contact" class="contact">       
+   
+ 
+    <section id="contact" class="contact">      
         <div class="formulaire">
             <div class="for-for">
                 <div class="formu">
@@ -153,35 +167,36 @@
                     <form action="votre_script_de_traitement.php" method="post">
                         <label for="name">Nom :</label>
                         <input type="text" id="name" name="name" required>
-                        
+                       
                         <label for="email">E-mail :</label>
                         <input type="email" id="email" name="email" required>
-                        
+                       
                         <label for="subject">Sujet :</label>
                         <input type="text" id="subject" name="subject" required>
-                        
+                       
                         <label for="message">Message :</label>
                         <textarea id="message" name="message" rows="4" required></textarea>
-                        
+                       
                         <button class="cta-button" type="submit">Envoyer</button>
                     </form>
                 </div>
-        
+           
+       
                 <img src="/images/meuf.webp" alt="Customer service representative image">
             </div>
         </section>
-
+ 
 <script src="{{ asset('js/myGame/phaser.min.js') }}"></script> <!-- Inclusion de Phaser -->
 <script src="{{ asset('js/myGame/game.js') }}"></script>    <!-- Inclusion de votre fichier de jeu -->
-
-
+ 
+ 
 <script>
     // Récupérer tous les éléments avec la classe 'info-title'
     document.querySelectorAll('.info-title').forEach(function(titleElement) {
         titleElement.addEventListener('click', function() {
             var infoId = this.getAttribute('data-id');
             var descriptionElement = document.getElementById('description-' + infoId);
-            
+           
             // Alterner l'affichage de la description
             if (descriptionElement.style.display === 'none') {
                 descriptionElement.style.display = 'block';
@@ -190,17 +205,17 @@
             }
         });
     });
-                
-
+               
+ 
     document.getElementById('getWeather').addEventListener('click', async () => {
     const city = document.getElementById('city').value;
     const weatherApiKey = '13a8212552579d1e8ec8126ba3817805'; // Remplacez par votre clé API OpenWeatherMap
-
+ 
     if (city) {
         // Appel à l'API météo
         const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApiKey}&units=metric`);
         const weatherData = await weatherResponse.json();
-
+ 
         if (weatherData.cod === 200) {
             const weatherInfo = `
                 <h2>Météo actuelle à ${weatherData.name}</h2>
@@ -215,25 +230,25 @@
         alert('Veuillez entrer une ville.');
     }
 });
-
-
-
+ 
+ 
+ 
     document.getElementById("openModal").onclick = function() {
         document.getElementById("myModal").style.display = "block";
     }
-
+ 
     // Fermer la modal lorsqu'on clique sur la croix
     document.getElementsByClassName("close-index")[0].onclick = function() {
         document.getElementById("myModal").style.display = "none";
     }
-
+ 
     // Fermer la modal en cliquant à l'extérieur de la modal
     window.onclick = function(event) {
         if (event.target == document.getElementById("myModal")) {
             document.getElementById("myModal").style.display = "none";
         }
     }
-
-
+ 
+ 
 </script>
 {% endblock %}
