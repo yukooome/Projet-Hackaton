@@ -26,6 +26,8 @@ function preload() {
     this.load.image('dbIcon', 'assets/Sprites/3DdataCenter.webp');
     this.load.image('tile', 'assets/Sprites/tile-tree-quad.png');
     this.load.image('tileAfter', 'assets/Sprites/tile-end.png');
+    this.load.image('river', 'assets/Sprites/tile-river-straight.png');
+    this.load.image('dry', 'assets/Sprites/tile-river-transition.png');
 }
 
 function create() {
@@ -82,7 +84,7 @@ function create() {
         let y = startY + (n - 1) * space + (n - 1 - i) * space;
         
         for (let j = i; j >= 0; j--) {
-            let tile = this.add.image(x, y, 'tile');
+            let tile = this.add.image(x, y, 'river');
             tile.setOrigin(0.5, 0.5);
             tile.setScale(1.5);
             tiles.push(tile);
