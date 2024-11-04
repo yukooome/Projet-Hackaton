@@ -269,55 +269,133 @@ height: 80%;
     left: 420px;
 }
 
-/* Footer */
+/*FOOTER*/
+
 footer {
+    background: #16222A;
+    background: -webkit-linear-gradient(59deg, #3a7351, #162a1a);
     background: linear-gradient(59deg, #3a7351, #162a1a);
     color: white;
-    width: 100%;
-}
-
-footer a {
+    margin-top:100px;
+  }
+  
+  footer a {
     color: #fff;
     font-size: 14px;
     transition-duration: 0.2s;
-}
-
-footer a:hover {
+  }
+  
+  footer a:hover {
     color: #FA944B;
     text-decoration: none;
-}
-
-.copy {
+  }
+  
+  .copy {
     font-size: 12px;
     padding: 10px;
     border-top: 1px solid #FFFFFF;
-}
-
-.footer-middle {
+  }
+  
+  .footer-middle {
     padding-top: 2em;
     color: white;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-ul.social-network {
+  }
+  
+  
+  /*SOCİAL İCONS*/
+  
+  /* footer social icons */
+  
+  ul.social-network {
     list-style: none;
     display: inline;
+    margin-left: 0 !important;
     padding: 0;
-}
-
-ul.social-network li {
+  }
+  
+  ul.social-network li {
     display: inline;
     margin: 0 5px;
-}
+  }
+  
+  
+  /* footer social icons */
+  
+  .social-network a.icoFacebook:hover {
+    background-color: #3B5998;
+  }
+  
+  .social-network a.icoLinkedin:hover {
+    background-color: #007bb7;
+  }
+  
+  .social-network a.icoFacebook:hover i,
+  .social-network a.icoLinkedin:hover i {
+    color: #fff;
+  }
+  
+  .social-network a.socialIcon:hover,
+  .socialHoverClass {
+    color: #44dd68;
+  }
+  
+  .social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+  }
+  
+  .social-circle li i {
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+  }
+  
+  .social-circle li a:hover i,
+  .triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  
+  .social-circle i {
+    color: #595959;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+  }
+  
+  .social-network a {
+    background-color: #F9F9F9;
+  }
+  
 
+  .gch-top-1{ 
+    background-image: url('0954b706-7246-4a79-9aed-94a409677b32.webp'); /* Chemin de l'image */
+    background-size: cover; /* Adapte l'image pour couvrir tout le div */
+    background-position: center; /* Centre l'image dans le div */
+    background-repeat: no-repeat; /* Évite que l'image se répète */}
 
-
-
-
-
-
+.gch-top-2 { 
+    background-image: url('08fd172a-9409-407a-9c39-ef510f446cb9.webp'); /* Chemin de l'image */
+    background-size: cover; /* Adapte l'image pour couvrir tout le div */
+    background-position: center; /* Centre l'image dans le div */
+    background-repeat: no-repeat; /* Évite que l'image se répète */}
 
 
 
@@ -512,3 +590,254 @@ ul.social-network li {
         margin-top: 10px;
     }
 }
+
+.newsletter h4 {font-size: 1.2em;}
+
+.newsletter form, .webinars ul, .latest-news ul {
+   width:90%;
+   height:90%;
+   text-decoration: none;
+   list-style: none;
+   justify-content: center;
+   a {
+    color:  #22854d; /* Green color */
+    text-decoration: none; /* Optional: removes underline */
+}
+
+a:hover {
+    color:#1a6538;  /* Darker green color on hover */
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+}
+
+.droite {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.droite > div {  
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;}
+
+
+
+.newsletter input[type="email"], .newsletter button {
+    padding: 8px;
+    margin-top: 5px;
+    width: 100%;
+    height:40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.newsletter button {
+    background-color: #22854d;
+    color: white;
+    cursor: pointer;
+    height: 40px;
+}
+
+.newsletter button:hover {
+    background-color: #1a6538;
+}
+
+/* Style général de la scrollbar */
+.webinars ::-webkit-scrollbar {
+    width: 8px; /* Largeur de la scrollbar */
+}
+
+.webinars ::-webkit-scrollbar-track {
+    background: #f0f8f5; /* Couleur de fond de la piste */
+}
+
+.webinars ::-webkit-scrollbar-thumb {
+    background-color: #1a6538; /* Couleur de la scrollbar */
+    border-radius: 10px; /* Bords arrondis pour la scrollbar */
+    border: 2px solid #f0f8f5; /* Bordure autour de la scrollbar */
+}
+
+/* Pour Firefox */
+.webinars {
+    scrollbar-width: thin;
+    scrollbar-color: #1a6538 #f0f8f5; /* Couleur de la barre et de la piste */
+}
+
+.webinars {
+  
+    overflow-y: auto; /* Active la barre de défilement verticale si nécessaire */
+}
+
+.testimonials p{
+background-color: white;
+border-radius: 15px ;
+padding:5px;
+color:#1a6538;
+}
+
+.latest-news ul {background-color: white; border-radius: 15px; padding: 5px; width: 90%;}
+
+.new-section {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.new-container {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.new-box {
+    flex: 1;
+    background-color: #e1f2e7;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.new-box h3 {
+    color: #2c6e49;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.new-box p, .faq-question {
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+}
+
+#question-text{margin-bottom: 20px;}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+
+#options-container label {
+    display: flex;
+    align-items: center;
+    background-color: #f1f8f4;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#options-container input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #2c6e49; /* couleur de l'option sélectionnée */
+}
+
+#options-container label:hover {
+    background-color: #d4ebdc;
+}
+
+#next-button {
+    background-color: #2c6e49;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#next-button:hover {
+    background-color: #1e4f36;
+}
+
+#quiz-result {
+    color: #2c6e49;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+  /* Styles pour la FAQ */
+  .faq-item {
+    width: 600px;
+    background-color: #f1f8f4;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .faq-item:hover {
+    background-color: #d4ebdc;
+  }
+
+  .faq-answer {
+    display: none;
+    padding-top: 10px;
+    color: #333;
+  }
+
+  #new-box-1{ background-color: rgba(255, 255, 255, 0.15); /* Couleur blanche avec 50% d'opacité */
+    background-image: url('DALL·E\ 2024-10-31\ 12.52.42\ -\ A\ minimalistic\,\ soft\,\ and\ clean\ background\ image.\ The\ background\ features\ a\ gradient\ blending\ from\ light\ pastel\ green\ to\ soft\ white\,\ with\ subtle\ geome.webp'); /* Chemin de l'image */
+    background-size: cover; /* Adapte l'image pour couvrir tout le div */
+    background-position: center; /* Centre l'image dans le div */
+    background-repeat: no-repeat; /* Évite que l'image se répète */
+    position: relative; /* Nécessaire pour le positionnement de l'overlay */}
+
+    #new-box-2 {
+        background-image: url('e3c1adda-c961-4a14-b7e2-432e00e1ff8d.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative; /* Nécessaire pour le positionnement de l'overlay */
+      }
+      
+      #new-box-2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.25); /* Overlay blanche semi-transparente */
+        z-index: 1;
+      }
+      
+      #new-box-2 > * {
+        position: relative;
+        z-index: 2; /* Assure que le contenu est au-dessus de l'overlay */
+      }
+
+  #new-box-2 > h3 {width: 500px;
+    background-color: #f1f8f4;
+    padding: 5px;
+    border-radius: 8px;
+    }
+
+    
+
+  
+  
